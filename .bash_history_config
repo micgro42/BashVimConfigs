@@ -1,0 +1,17 @@
+# history tuning compare to http://blog.macromates.com/2008/working-with-history-in-bash/
+# blog.snactum.geek.nz/better-bash-history/
+# https://unix.stackexchange.com/questions/18212/bash-history-ignoredups-and-erasedups-setting-conflict-with-common-history
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth:erasedups
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=100000
+HISTFILESIZE=100000
+
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+export HISTTIMEFORMAT="%F %T "
