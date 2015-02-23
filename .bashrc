@@ -8,8 +8,10 @@ case $- in
       *) return;;
 esac
 
-if [ -f ~/.bash_history_config ]; then
-    source ~/.bash_history_config
+if [ -f ./.bash_history_config ]; then
+    source ./.bash_history_config
+else
+    echo "history file not found"
 fi
 
 # check the window size after each command and, if necessary,
@@ -91,8 +93,10 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
+if [ -f ./.bash_aliases ]; then
+    source ./.bash_aliases
+else
+    echo "alias file not found"
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -115,5 +119,5 @@ export EDITOR=vim
 xset b 0
 
 if [ -f ~/liquidprompt/liquidprompt ]; then
-  #source ~/liquidprompt/liquidprompt
+  source ~/liquidprompt/liquidprompt
 fi
