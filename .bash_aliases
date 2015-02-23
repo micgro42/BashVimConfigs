@@ -1,7 +1,8 @@
+#!/usr/bin/env bash
 alias rm='rm -v'
 alias mv='mv -v'
 alias cp='cp -v'
-alias ll='ls -lha'
+alias ll='ls -lhaF'
 alias lt='ls -lhatr'
 alias l.='ls -d .*'
 alias mkdir='mkdir -pv'
@@ -85,3 +86,5 @@ alias cpProgress="rsync --progress -ravz"
 alias watchtail='watch -n .5 tail -n 20'
 alias watchdir='watch -n .5 ls -la'
 alias watchsize='watch -n .5 du -h –max-depth=1'
+
+#alias which='alias | which --tty-only --read-alias --show-dot --show-tilde'
