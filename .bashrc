@@ -8,8 +8,17 @@ case $- in
       *) return;;
 esac
 
-if [ -f ./.bash_history_config ]; then
-    source ./.bash_history_config
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+  SCRIPTDIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$SCRIPTDIR/SOURCE"
+done
+SCRIPTDIR="$( cd -P "$( dirname "SOURCE" )" && pwd )"
+echo $SCRIPTDIR
+
+if [ -f ~/bashvimconfigs/.bash_history_config ]; then
+    source ~/bashvimconfigs/.bash_history_config
 else
     echo "history file not found"
 fi
@@ -93,8 +102,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ./.bash_aliases ]; then
-    source ./.bash_aliases
+if [ -f ~/bashvimconfigs/.bash_aliases ]; then
+    source ~/bashvimconfigs/.bash_aliases
 else
     echo "alias file not found"
 fi
@@ -119,5 +128,5 @@ export EDITOR=vim
 xset b 0
 
 if [ -f ~/liquidprompt/liquidprompt ]; then
-  source ~/liquidprompt/liquidprompt
+  #source ~/liquidprompt/liquidprompt
 fi
