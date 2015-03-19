@@ -88,3 +88,14 @@ alias watchdir='watch -n .5 ls -la'
 alias watchsize='watch -n .5 du -h –max-depth=1'
 
 #alias which='alias | which --tty-only --read-alias --show-dot --show-tilde'
+
+# The following part is from http://www.splitbrain.org/blog/2008-02/27-keeping_your_home_directory_organized :
+export TD="$HOME/temp/`date +'%Y-%m-%d'`"
+td(){
+    td=$TD
+    if [ ! -z "$1" ]; then
+        td="$HOME/temp/`date -d "$1 days" +'%Y-%m-%d'`";
+    fi
+    mkdir -p $td; cd $td
+    unset td
+}
