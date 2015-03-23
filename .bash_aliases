@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-alias rm='rm -v'
-alias mv='mv -v'
-alias cp='cp -v'
+alias rm='rm -iv'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias ln='ln -i'
 alias ll='ls -lhaF'
 alias lt='ls -lhatr'
 alias l.='ls -d .*'
@@ -31,11 +32,6 @@ alias free="free -th" #human readable and totals
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
 
 # some things from http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html and comments
-
-#safety nets
-alias mv='mv -i'
-alias cp='cp -i'
-alias ln='ln -i'
 
 ## get top process eating memory
 alias psmem='ps auxf | head -n 1 && ps auxf | sort -nr -k 4'
