@@ -22,6 +22,7 @@ alias df="df -Tha --total" # print total, show fs-type,
 
 # du - estimate file space usage
 # alias du="du -ach | sort -h"
+alias duh="du -d1 -h | sort -h"
 
 # Display amount of free and used memory in the system
 alias free="free -th" #human readable and totals
