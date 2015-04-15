@@ -120,8 +120,12 @@ if ! shopt -oq posix; then
 fi
 
 export PATH=$HOME/bin:$HOME/.local/bin:/sbin:$PATH
+
+if [ -f ~/.local/bin/virtualenvwrapper_lazy.sh ]; then
 export WORKON_HOME=$HOME/.virtualenvs
-source /home/michael/.local/bin/virtualenvwrapper_lazy.sh
+source ~/.local/bin/virtualenvwrapper_lazy.sh
+fi
+
 export VISUAL=vim
 export EDITOR=vim
 
