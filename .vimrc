@@ -12,3 +12,5 @@ set cursorline          " highlight current line
 set incsearch          " Incremental search
 set wildmenu            " visual autocomplete for command menu
 set showmatch           " highlight matching [{()}]
+
+filetype indent plugin on
