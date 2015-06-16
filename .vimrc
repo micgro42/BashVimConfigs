@@ -23,6 +23,16 @@ let g:Powerline_mode_cv="V·BLOCK"
 let g:Powerline_mode_S="S·LINE"
 let g:Powerline_mode_cs="S·BLOCK"
 
+" syntastic setup
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
 " vim config files, which are usually sourced: /etc/vim/vimrc, ~/.vimrc
 autocmd Filetype gitcommit setlocal spell textwidth=72
 syntax enable " enable syntax processing
