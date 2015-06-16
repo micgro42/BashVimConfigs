@@ -129,6 +129,8 @@ fi
 export VISUAL=vim
 export EDITOR=vim
 
+export TERM=xterm-256color
+
 xset b 0
 
 if [ -f ~/liquidprompt/liquidprompt ]; then

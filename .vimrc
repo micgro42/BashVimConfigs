@@ -1,16 +1,44 @@
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+Bundle 'klen/python-mode'
+Plugin 'StanAngeloff/php.vim'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'powerline/fonts'
+call vundle#end()
+filetype indent plugin on
+
+" Powerline setup
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=8
+set fillchars+=stl:\ ,stlnc:\
+let g:Powerline_mode_V="V·LINE"
+let g:Powerline_mode_cv="V·BLOCK"
+let g:Powerline_mode_S="S·LINE"
+let g:Powerline_mode_cs="S·BLOCK"
+
 " vim config files, which are usually sourced: /etc/vim/vimrc, ~/.vimrc
 autocmd Filetype gitcommit setlocal spell textwidth=72
 syntax enable " enable syntax processing
-setglobal modeline  " parses vim instructions in the file like // vim:ts=4:sw=4:et:
 set background=dark
-set tabstop=4       " number of visual spaces per TAB
-set softtabstop=4   " number of spaces in tab when editing
-set expandtab       " tabs are spaces
+colorscheme solarized
+setglobal modeline      " parses vim instructions in the file like // vim:ts=4:sw=4:et:
+set tabstop=4           " number of visual spaces per TAB
+set softtabstop=4       " number of spaces in tab when editing
+set expandtab           " tabs are spaces
 set number              " show line numbers
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
-set incsearch          " Incremental search
+set incsearch           " Incremental search
 set wildmenu            " visual autocomplete for command menu
 set showmatch           " highlight matching [{()}]
+set laststatus=2        " Always display the statusline in all windows
+set showtabline=2       " Always display the tabline, even if there is only one tab
+set noshowmode          " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
-filetype indent plugin on
