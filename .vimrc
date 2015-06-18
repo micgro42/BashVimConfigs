@@ -57,7 +57,7 @@ let g:syntastic_check_on_wq = 0
 autocmd Filetype gitcommit setlocal spell textwidth=72
 syntax enable " enable syntax processing
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 setglobal modeline      " parses vim instructions in the file like // vim:ts=4:sw=4:et:
 set tabstop=4           " number of visual spaces per TAB
 set softtabstop=4       " number of spaces in tab when editing
@@ -72,3 +72,4 @@ set laststatus=2        " Always display the statusline in all windows
 set showtabline=2       " Always display the tabline, even if there is only one tab
 set noshowmode          " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 set scrolloff=5         " always show 5 lines before/after the cursor
+set title
