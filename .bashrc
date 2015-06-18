@@ -122,8 +122,13 @@ fi
 export PATH=$HOME/bin:$HOME/.local/bin:/sbin:$PATH
 
 if [ -f ~/.local/bin/virtualenvwrapper_lazy.sh ]; then
-export WORKON_HOME=$HOME/.virtualenvs
-source ~/.local/bin/virtualenvwrapper_lazy.sh
+  export WORKON_HOME=$HOME/.virtualenvs
+  source ~/.local/bin/virtualenvwrapper_lazy.sh
+else
+  if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/local/bin/virtualenvwrapper.sh
+  fi
 fi
 
 export VISUAL=vim
