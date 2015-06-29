@@ -79,6 +79,13 @@ export PS1="\[\e[36m\]\u.\h.\W\[\e[0m\]\[\$prevCmd\]>\[$RST\]"
 #progress bar on file copy. Useful evenlocal.
 alias cpProgress="rsync --progress -ravz"
 
+# -a archive: recursive, etc
+# -v be more verbose
+# -z use compression
+# -P progress bar and keeping partial files
+# --append-verify do a checksum after finshing copying files
+alias dircopy="rsync -avzP --append-verify"
+
 
 alias watchtail='watch -n .5 tail -n 20'
 alias watchdir='watch -n .5 ls -la'
