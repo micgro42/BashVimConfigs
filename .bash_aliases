@@ -51,6 +51,7 @@ alias cpuinfo='lscpu'
 ## get GPU ram on desktop / laptop## 
 alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 
+alias gitkira='GIT_SSH_COMMAND="ssh -p 36000" git'
 
 # the following is supposed to color the shell based on the previous command. But it changes some more things, so I leave it deactivated until I understand it.
 : '
@@ -113,3 +114,4 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
+
