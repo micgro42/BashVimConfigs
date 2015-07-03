@@ -27,6 +27,8 @@ Bundle 'maksimr/vim-jsbeautify'
 " some yaml support
 Bundle 'avakhov/vim-yaml.git'
 
+Plugin 'vim-latex/vim-latex'
+
 Bundle 'klen/python-mode'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
