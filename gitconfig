@@ -6,6 +6,10 @@
 	commitencoding = utf8
 [push]
 	default = simple
+[diff]
+	algorithm = histogram
+       # http://git.661346.n2.nabble.com/Different-diff-strategies-in-add-interactive-td7588815.html
+
 
 [alias]
 # inspired by the following webpages:
