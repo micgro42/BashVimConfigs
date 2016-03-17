@@ -141,3 +141,6 @@ xset b 0
 if [ -f ~/liquidprompt/liquidprompt ]; then
   #source ~/liquidprompt/liquidprompt
 fi
+
+setxkbmap -layout us,de
+setxkbmap -option 'grp:switch' # switch while right-alt is pressed
